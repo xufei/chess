@@ -31,8 +31,9 @@ export default class Game {
 		this.moveablePlaces = [];
 
 		this.loggers = [];
+	}
 
-
+	init() {
 		for (let i = 0; i < 9; i++) {
 			this.situation[i] = [];
 		}
@@ -43,7 +44,6 @@ export default class Game {
 
 		this.currentPlayer = this.redPlayer;
 	}
-
 
 	destroy() {
 		this.situation = null;
