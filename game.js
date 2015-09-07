@@ -38,9 +38,10 @@ export default class Game {
 			this.situation[i] = [];
 		}
 
+		var that = this;
 		this.initialSituation.forEach(function(it) {
-			this.chesses.push(this.createChess(it));
-		}).bind(this);
+			that.chesses.push(that.createChess(it));
+		});
 
 		this.currentPlayer = this.redPlayer;
 	}
