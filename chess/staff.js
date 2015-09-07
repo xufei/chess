@@ -1,8 +1,8 @@
 "use strict";
 
-import ChessMan from "chessman";
-import ChessType from "type";
-import ChessColor from "color";
+import ChessMan from "./chessman";
+import ChessType from "./type";
+import ChessColor from "./color";
 
 export default class Staff extends ChessMan {
 	constructor(color) {

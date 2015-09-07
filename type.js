@@ -1,6 +1,7 @@
 "use strict";
 
 export default class PlayerType {
-	static LOCAL = 0;
-	static REMOTE = 1;
 }
+
+PlayerType.LOCAL = 0;
+PlayerType.REMOTE = 1;

@@ -1,8 +1,8 @@
 "use strict";
 
-import GameState from "state";
-import ChessType from "chess/type";
-import Factory from "chess/factory";
+import GameState from "./state";
+import ChessType from "./chess/type";
+import Factory from "./chess/factory";
 
 export default class Game {
 	constructor() {

@@ -1,8 +1,9 @@
 "use strict";
 
 export default class GameState {
-	static UNINITIALIZED = -1;
-	static FINISHED = 0;
-	static READY = 1;
-	static ACTING = 2;
 }
+
+GameState.UNINITIALIZED = -1;
+GameState.FINISHED = 0;
+GameState.READY = 1;
+GameState.ACTING = 2;

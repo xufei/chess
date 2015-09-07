@@ -1,12 +1,13 @@
 "use strict";
 
 export default class ChessType {
-	static GENERAL = 7;
-	static GUARD = 6;
-	static STAFF = 5;
-	static HORSE = 5;
-	static CHARIOT = 3;
-	static CANNON = 2;
-	static SOLDIER = 1;
-	static BLANK = 0;
 }
+
+ChessType.GENERAL = 7;
+ChessType.GUARD = 6;
+ChessType.STAFF = 5;
+ChessType.HORSE = 5;
+ChessType.CHARIOT = 3;
+ChessType.CANNON = 2;
+ChessType.SOLDIER = 1;
+ChessType.BLANK = 0;
