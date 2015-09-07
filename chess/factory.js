@@ -21,7 +21,7 @@ ChessFactory.ChessTypes = [General, Guard, Staff, Horse, Chariot, Cannon, Soldie
  * @returns {*}
  */
 ChessFactory.createChess = function (data) {
-	let chess = new (ChessTypes[7 - data[1]])(data[0], data[1]);
+	let chess = new (ChessFactory.ChessTypes[7 - data[1]])(data[0], data[1]);
 	chess.x = data[2];
 	chess.y = data[3];
 	return chess;
