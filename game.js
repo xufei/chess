@@ -59,7 +59,7 @@ export default class Game {
 		chess.game = this;
 		this.situation[chess.x][chess.y] = chess;
 
-		if (chess.type == Type.GENERAL) {
+		if (chess.type == ChessType.GENERAL) {
 			this.generals.push(chess);
 		}
 
@@ -240,7 +240,7 @@ export default class Game {
 				}
 			}
 
-			if (killedChess.type == Type.GENERAL) {
+			if (killedChess.type == ChessType.GENERAL) {
 				let winner = (killedChess.color == Color.RED) ? "黑" : "红";
 				this.prompt("结束啦，" + winner + "方胜利！");
 				this.state = GameState.FINISHED;
