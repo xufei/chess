@@ -3,6 +3,7 @@
 import GameState from "./state";
 import ChessType from "./chess/type";
 import Factory from "./chess/factory";
+import PlayerType from "./type";
 
 export default class Game {
 	constructor() {
