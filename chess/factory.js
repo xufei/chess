@@ -20,5 +20,5 @@ export default ChessFactory = {
 		chess.x = data[2];
 		chess.y = data[3];
 		return chess;
-	};
+	}
 };
