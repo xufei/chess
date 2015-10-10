@@ -37,7 +37,7 @@ export default class Game {
 			this.situation[i] = [];
 		}
 
-		this.initialSituation.forEach(it => this.chesses.push(this.createChess(it));
+		this.initialSituation.forEach(it => this.chesses.push(this.createChess(it)));
 		this.currentPlayer = this.redPlayer;
 	}
 
