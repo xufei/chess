@@ -1,7 +1,4 @@
-"use strict";
-
-export default class PlayerType {
-}
-
-PlayerType.LOCAL = 0;
-PlayerType.REMOTE = 1;
+export default PlayerType = {
+	LOCAL: 0,
+	REMOTE: 1
+};

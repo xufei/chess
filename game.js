@@ -1,5 +1,3 @@
-"use strict";
-
 import GameState from "./state";
 import ChessType from "./chess/type";
 import Factory from "./chess/factory";
@@ -39,10 +37,7 @@ export default class Game {
 			this.situation[i] = [];
 		}
 
-		this.initialSituation.forEach(function(it) {
-			this.chesses.push(this.createChess(it));
-		}.bind(this));
-
+		this.initialSituation.forEach(it => this.chesses.push(this.createChess(it));
 		this.currentPlayer = this.redPlayer;
 	}
 
@@ -99,13 +94,7 @@ export default class Game {
 
 		if (this.currentChess) {
 			if (this.currentChess.color + chess.color == 0) {
-				let canKill = false;
-				for (let i = 0; i < this.chessUnderAttack.length; i++) {
-					if ((this.chessUnderAttack[i].x == chess.x) && (this.chessUnderAttack[i].y == chess.y)) {
-						canKill = true;
-						break;
-					}
-				}
+				let canKill = this.chessUnderAttack.filter(it => (it.x == chess.x) && (it.y == chess.y)).length;
 
 				if (canKill) {
 					let step = this.moveChess(this.currentChess, chess.x, chess.y, false);
@@ -201,9 +190,7 @@ export default class Game {
 
 	log(step) {
 		let chess = this.situation[step.toX][step.toY];
-		this.loggers.forEach(function (logger) {
-			logger.log(chess, step);
-		});
+		this.loggers.forEach(logger => logger.log(chess, step));
 	}
 
 	addWatcher(watcher) {
@@ -211,17 +198,13 @@ export default class Game {
 	}
 
 	notify(step) {
-		this.watchers.forEach(function (watcher) {
-			watcher.notify(step);
-		});
+		this.watchers.forEach(watcher => watcher.notify(step));
 	}
 
 	processHistory(history) {
 		let newSteps = history.slice(this.history.length, history.length);
 		let game = this;
-		newSteps.forEach(function (step) {
-			game.executeStep(step);
-		});
+		newSteps.forEach(step => this.executeStep(step));
 	}
 
 	executeStep(step, isUndo) {
@@ -233,12 +216,7 @@ export default class Game {
 		chess.y = step.toY;
 
 		if (killedChess) {
-			for (let i = 0; i < this.chesses.length; i++) {
-				if (killedChess == this.chesses[i]) {
-					this.chesses.splice(i, 1);
-					break;
-				}
-			}
+			this.chesses = this.chesses.filter(it => it == killedChess);
 
 			if (killedChess.type == ChessType.GENERAL) {
 				let winner = (killedChess.color == Color.RED) ? "黑" : "红";

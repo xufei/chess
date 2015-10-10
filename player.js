@@ -1,5 +1,3 @@
-"use strict";
-
 export default class Player {
 	constructor(user, color, type) {
 		this.game = null;
