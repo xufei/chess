@@ -7,7 +7,7 @@ import Chariot from "./chariot";
 import Cannon from "./cannon";
 import Soldier from "./soldier";
 
-export default ChessFactory = {
+const ChessFactory = {
 	ChessTypes: [General, Guard, Staff, Horse, Chariot, Cannon, Soldier],
 
 	/**
@@ -22,3 +22,5 @@ export default ChessFactory = {
 		return chess;
 	}
 };
+
+export default ChessFactory;
