@@ -1,4 +1,4 @@
-export default ChessType = {
+const ChessType = {
 	GENERAL: 7,
 	GUARD: 6,
 	STAFF: 5,
@@ -8,3 +8,5 @@ export default ChessType = {
 	SOLDIER: 1,
 	BLANK: 0
 };
+
+export default ChessType;
