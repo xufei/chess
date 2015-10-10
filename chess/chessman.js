@@ -1,5 +1,3 @@
-"use strict";
-
 export default class ChessMan {
 	constructor(color, type) {
 		this.game = null;

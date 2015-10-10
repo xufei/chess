@@ -1,5 +1,3 @@
-"use strict";
-
 import ChessMan from "./chessman";
 import ChessType from "./type";
 import ChessColor from "./color";

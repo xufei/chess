@@ -1,9 +1,5 @@
-"use strict";
-
-export default class ChessColor {
-}
-
-
-ChessColor.RED = 1;
-ChessColor.BLACK = -1;
-ChessColor.GREY = 0;
+export default ChessColor = {
+	RED: 1,
+	BLACK: -1,
+	GREY: 0
+};
