@@ -216,7 +216,14 @@ export default class Game {
 		chess.y = step.toY;
 
 		if (killedChess) {
-			this.chesses = this.chesses.filter(it => it == killedChess);
+			//this.chesses = this.chesses.filter(it => it == killedChess);
+			
+			for (let i = 0; i < this.chesses.length; i++) {
+                    if (killedChess == this.chesses[i]) {
+                        this.chesses.splice(i, 1);
+                        break;
+                    }
+                }
 
 			if (killedChess.type == ChessType.GENERAL) {
 				let winner = (killedChess.color == Color.RED) ? "黑" : "红";
