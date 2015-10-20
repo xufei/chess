@@ -9,30 +9,13 @@ export default class Horse extends ChessMan {
 
 	canGo(x, y) {
 		if (this.valid(x, y) && !this.game.isFriendly(this.color, x, y)) {
-			if (((Math.abs(this.x - x) == 1)
-				&& (Math.abs(this.y - y) == 2))
-				|| ((Math.abs(this.x - x) == 2)
-				&& (Math.abs(this.y - y) == 1))) {
-				let i = -1;
-				let j = -1;
-				if (x - this.x == 2) {
-					i = this.x + 1;
-					j = this.y;
-				}
-				else if (this.x - x == 2) {
-					i = this.x - 1;
-					j = this.y;
-				}
-				else if (y - this.y == 2) {
-					i = this.x;
-					j = this.y + 1;
-				}
-				else if (this.y - y == 2) {
-					i = this.x;
-					j = this.y - 1;
-				}
-
-				if (this.game.isEmpty(i, j)) {
+			let dx = this.x - x;
+			let dy = this.y - y;
+			
+			// 马走日
+			if (dx*dx + dy*dy == 5) {
+				// 马腿位置
+				if (this.game.isEmpty(Math.round((2 * this.x + x) / 3), Math.round((2 * this.y + y) / 3))) {
 					return true;
 				}
 			}

@@ -43,9 +43,8 @@ export default class Staff extends ChessMan {
 				return false;
 			}
 			else {
-				let i = (this.x + x) / 2;
-				let j = (this.y + y) / 2;
-				if (this.game.isEmpty(i, j)) {
+				// 象眼
+				if (this.game.isEmpty((this.x + x) / 2, (this.y + y) / 2)) {
 					return true;
 				}
 				else {
