@@ -43,7 +43,7 @@ export default class Staff extends ChessMan {
 				return false;
 			}
 			else {
-				// 象眼
+				// 象眼位置
 				if (this.game.isEmpty((this.x + x) / 2, (this.y + y) / 2)) {
 					return true;
 				}
